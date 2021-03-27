@@ -6,9 +6,11 @@ var pets = [
 pets[0];
 //{name:"Ralph", owner:"Adhithya"}
 
-dinosaurs[0]["owner"];
+pets[0]["owner"];
 //"Adhithya"
 
-dinosuars[0].owner;
+pets[0].owner;
 //"Adhithya"
+
+//YOU CAN ONLY USE DOT NONTATION WITH OBJECTS
 
