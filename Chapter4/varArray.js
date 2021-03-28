@@ -9,4 +9,6 @@ hermanos[0].name;
 //Adhithya
 
 hermanos[0].luckyNumbers[2];
-//11
+//go get the first element in hermanos which is adh.
+//go into that and get the second array element which is 11.
+//Since we reached the end of the line output 11.
