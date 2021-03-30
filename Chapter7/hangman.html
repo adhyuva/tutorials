@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANGMAN</title>
+</head>
+<body>
+    <script>
+        let words = [
+            "add",
+            "ball",
+            "cat",
+            "dog",
+            "egg",
+            "fail",
+            "gulp",
+            "hot",
+            "ice",
+            "jump",
+            "kick",
+            "lion",
+            "moon",
+            "neck",
+            "over",
+            "pop",
+            "quil",
+            "race",
+            "some",
+            "tip",
+            "ugly",
+            "vain",
+            "what",
+            "xray",
+            "yum",
+            "zing"
+        ];
+        let word = words[Math.floor(Math.random() * words.length)];
+        let answerArray = [];
+        for(let i = 0; i < word.length; i++){
+            answerArray[i] += "_";
+        }
+        let remainLetters = words.length;
+        while (remainLetters > 0){
+            confirm(answerArray.join(""))
+
+        }
+        
+
+    </script>
+</body>
+</html>
