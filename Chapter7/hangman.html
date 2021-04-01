@@ -38,8 +38,8 @@
             "zing"
         ];
         //Pick a Random Word
-        let word = words[Math.floor(Math.random() * words.length)];
         let guesses = 10;
+        let word = words[Math.floor(Math.random() * words.length)];
         console.log(word);
         //Set the Answer Array
         let answerArray = [];
@@ -48,7 +48,7 @@
         }
         let remainingLetters = word.length;
         //the game loop
-        while (remainingLetters > 0){
+        while (remainingLetters > 0 ){
             //show player progress
             alert(answerArray.join(" "));
             //get quess from player
@@ -61,22 +61,22 @@
                 //update game with words
                for(let j =0; j < word.length; j++){
                    if(word[j] === guess.toLowerCase()){
-                       answerArray[j] = guess;
+                       answerArray[j]  = guess.toLowerCase();
                        remainingLetters--;
                        console.log(remainingLetters);
-                   }
-                   guesses-=1;
-                   console.log(guesses);
-               }
+                       
+                   }             
+                }
+               guesses--;
+                console.log(guesses);
             }
-            if(guesses <= 0){
-                alert("You ran out of guesses. The answer is " + word + ".")
+            if(guesses == 0){
+                    alert("You ran out of guesses!");
+                    break;
             }
-        }
+        }~
         //finish game.
         alert("For this round, the answer is " + word + "!");
         </script>
-
-    </script>
 </body>
 </html>
