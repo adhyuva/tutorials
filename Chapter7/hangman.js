@@ -29,7 +29,7 @@ let words = [
 //Pick a Random Word
 let guesses = 10;
 let word = words[Math.floor(Math.random() * words.length)];
-//console.log(word);
+console.log(word);
 //Set the Answer Array
 let answerArray = [];
 for(let i = 0; i < word.length; i++) {
@@ -60,6 +60,7 @@ while (remainingLetters > 0 ){
             if(word[j] === guess){
                 if(answerArray[j] == guess) {
                     shouldWeDecrement = false;
+                    alert(`You already guessed the SAME correct letter. (${message})`)
                 } else {
                     answerArray[j] = guess;
                     remainingLetters--;
