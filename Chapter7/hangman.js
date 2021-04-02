@@ -13,7 +13,7 @@ let words = [
     "lion",
     "moon",
     "neck",
-    "over",
+    "odd",
     "pop",
     "quil",
     "race",
@@ -29,7 +29,7 @@ let words = [
 //Pick a Random Word
 let guesses = 10;
 let word = words[Math.floor(Math.random() * words.length)];
-console.log(word);
+//console.log(word);
 //Set the Answer Array
 let answerArray = [];
 for(let i = 0; i < word.length; i++) {
@@ -42,34 +42,39 @@ while (remainingLetters > 0 ){
     //show player progress
     alert(answerArray.join(" "));
     //get quess from player
-    let guess = prompt("Guess a letter or click Cancel to stop playing.");
+    let message = `${guesses} tries left`;
+    if(guesses == 1) {
+        message = "Last try";
+    }
+    let guess = prompt(`Guess a letter or click Cancel to stop playing. (${message})`);
     if(guess === null) {
         break;
     } else if(guess.length !== 1) {
-        alert("Enter a SINGLE letter please.");
+        alert(`Enter a SINGLE letter please. (${message})`);
     } else {
         //update game with words
         let letters= "";
-       for(let j =0; j < word.length; j++){
-           
-           if(word[j] === guess.toLowerCase()){
-               answerArray[j]  = guess.toLowerCase();
-               remainingLetters--;
-            
-           }    
-           if(guess.toLowerCase() !== answerArray[j]){
-                letters += " " + answerArray[j];
-           }else{
-               guesses--;
-           }
+        guess = guess.toLowerCase();
+        let shouldWeDecrement = true;
+        for(let j =0; j < word.length; j++){
+            if(word[j] === guess){
+                if(answerArray[j] == guess) {
+                    shouldWeDecrement = false;
+                } else {
+                    answerArray[j] = guess;
+                    remainingLetters--;
+                }
+            }
         }
-        console.log(guesses + "    " + letters);
+        if(shouldWeDecrement) {
+            guesses--;
+        }
     
-    if(guesses == 0){
+        if(guesses == 0){
             alert("You ran out of guesses!");
             break;
+        }
     }
-}
 }
 //finish game.
 //Uaing the varible guess, when will you decrement the guesses?
