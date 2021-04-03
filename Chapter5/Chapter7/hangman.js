@@ -1,25 +1,30 @@
 let words = [
-    "apple",
-    "banana",
-    "carrot",
+    "add",
+    "ball",
+    "cat",
+    "dog",
     "egg",
-    "figs",
-    "grape",
-    "honey",
-    "ice cream",
-    "jam",
-    "kiwi",
-    "lemon",
-    "mango",
-    "nut",
-    "orange",
-    "pea",
-    "rasin",
-    "spinach",
-    "turnip",
-    "watermelon",
-    "yam",
-    "zucchini"
+    "fail",
+    "gulp",
+    "hot",
+    "ice",
+    "jump",
+    "kick",
+    "lion",
+    "moon",
+    "neck",
+    "odd",
+    "pop",
+    "quil",
+    "race",
+    "some",
+    "tip",
+    "ugly",
+    "vain",
+    "what",
+    "xray",
+    "yum",
+    "zing"
 ];
 //Pick a Random Word
 let guesses = 10;
@@ -41,7 +46,7 @@ while (remainingLetters > 0 ){
     if(guesses == 1) {
         message = "Last try";
     }
-    let guess = prompt(`Guess a letter or click Cancel to stop playing. Hint: They are all foods(singular!) (${message})`);
+    let guess = prompt(`Guess a letter or click Cancel to stop playing. (${message})`);
     if(guess === null) {
         break;
     } else if(guess.length !== 1) {
