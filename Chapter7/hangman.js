@@ -22,7 +22,7 @@ let words = [
     "zucchini"
 ];
 //Pick a Random Word
-let guesses = 10;
+let guesses = 15;
 let word = words[Math.floor(Math.random() * words.length)];
 console.log(word);
 //Set the Answer Array
