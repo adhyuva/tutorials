@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src= "https://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+<body>
+    <h1 id="h1">I'm in and out in a flash!</h1>
+    <p id="p"></p>
+    <script>
+        for(let i =0; i <=100; i+=0.1){
+            let j = i *1000
+            $("#h1").fadeOut(i * 1000);
+            $("#h1").fadeIn(i * 1000);
+            $("#p").text(i + " milliseconds");
+        }
+    </script>
+</body>
+</html>
